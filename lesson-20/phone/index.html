@@ -3,11 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>PHONE APP</title>
   </head>
-  <body>
-    <header></header>
-    <main></main>
+  <body class="container">
+    <header>
+      <nav class="container">
+        <time class="time">03:00</time>
+
+        <ul class="list">
+          <li>
+            <img class="internet" src="./images/internet.png" alt="" />
+          </li>
+
+          <li class="battery-list">
+            <div class="battery">
+              <div class="level" id="level">0%</div>
+              <div class="tip"></div>
+            </div>
+            <div id="chargingStatus"></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container"></main>
     <footer></footer>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
