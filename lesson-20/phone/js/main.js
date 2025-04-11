@@ -1,3 +1,4 @@
+const apps = document.querySelector(".apps");
 const time = document.querySelector(".time");
 const internet = document.querySelector(".internet");
 function updateTime() {
@@ -47,3 +48,16 @@ navigator.getBattery().then((battery) => {
   battery.addEventListener("levelchange", updateBatteryStatus);
   battery.addEventListener("chargingchange", updateBatteryStatus);
 });
+
+function getApps({ title, image, url }) {
+  return `<div class="app">
+          <img src="${image}" alt=${title} />
+          <a href=${url}>${title}</a>
+        </div>`;
+}
+
+data.map((el) => {
+  apps.innerHTML += getApps(el);
+});
+
+console.log(data[0].image);
